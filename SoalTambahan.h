@@ -1,10 +1,11 @@
-typedef struct 
+typedef struct
 {
     int pembilang;
     int penyebut;
-}Pecahan;
+} Pecahan;
 
-void CetakMenu(){
+void CetakMenu()
+{
     printf("+--------------------------------------+\n");
     printf("| 1. Penjumlahan                       |\n");
     printf("| 2. Pengurangan                       |\n");
@@ -13,17 +14,51 @@ void CetakMenu(){
     printf("+--------------------------------------+\n");
 }
 
-void InputPecahan(Pecahan *pchn){
+void InputPecahan(Pecahan *pchn)
+{
     printf("\nInput Pembilang \t: ");
     scanf("%d", &pchn->pembilang);
-    printf("\nInput Penyebut \t\t: ");
+    printf("Input Penyebut \t\t: ");
     scanf("%d", &pchn->penyebut);
 }
 
-Pecahan resPenjumlahan(Pecahan pchn1, Pecahan pchn2);
+Pecahan resPenjumlahan(Pecahan pchn1, Pecahan pchn2)
+{
+    Pecahan hasil;
+    hasil.pembilang = (pchn1.pembilang * pchn2.penyebut) + (pchn2.pembilang * pchn1.penyebut);
+    hasil.penyebut = pchn1.penyebut * pchn2.penyebut;
 
-Pecahan resPengurangan(Pecahan pchn1, Pecahan pchn2);
+    return hasil;
+}
 
-Pecahan resPerkalian(Pecahan pchn1, Pecahan pchn2);
+Pecahan resPengurangan(Pecahan pchn1, Pecahan pchn2)
+{
+    Pecahan hasil;
+    hasil.pembilang = (pchn1.pembilang * pchn2.penyebut) - (pchn2.pembilang * pchn1.penyebut);
+    hasil.penyebut = pchn1.penyebut * pchn2.penyebut;
 
-Pecahan resPembagian(Pecahan pchn1, Pecahan pchn2);
+    return hasil;
+}
+
+Pecahan resPerkalian(Pecahan pchn1, Pecahan pchn2)
+{
+    Pecahan hasil;
+    hasil.pembilang = pchn1.pembilang * pchn2.pembilang;
+    hasil.penyebut = pchn1.penyebut * pchn2.penyebut;
+
+    return hasil;
+}
+
+Pecahan resPembagian(Pecahan pchn1, Pecahan pchn2)
+{
+    Pecahan hasil;
+    hasil.pembilang = pchn1.pembilang * pchn2.penyebut;
+    hasil.penyebut = pchn1.penyebut * pchn2.pembilang;
+
+    return hasil;
+}
+
+void CetakHasil(Pecahan hasil)
+{
+    printf("%d/%d", hasil.pembilang, hasil.penyebut);
+}
