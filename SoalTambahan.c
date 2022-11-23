@@ -5,7 +5,7 @@
 
 int main()
 {
-    Pecahan pchn1, pchn2, penjumlahan, pengurangan, perkalian, pembagian, result;
+    Pecahan pchn1, pchn2, result;
     int opsi;
     bool loop = false;
 
@@ -22,20 +22,20 @@ int main()
         switch (opsi)
         {
         case 1:
-            penjumlahan = resPenjumlahan(pchn1, pchn2);
-            CetakHasil(penjumlahan);
+            result = resPenjumlahan(pchn1, pchn2);
+            CetakHasil(result);
             break;
         case 2:
-            pengurangan = resPengurangan(pchn1, pchn2);
-            CetakHasil(pengurangan);
+            result = resPengurangan(pchn1, pchn2);
+            CetakHasil(result);
             break;
         case 3:
-            perkalian = resPerkalian(pchn1, pchn2);
-            CetakHasil(perkalian);
+            result = resPerkalian(pchn1, pchn2);
+            CetakHasil(result);
             break;
         case 4:
-            pembagian = resPerkalian(pchn1, pchn2);
-            CetakHasil(pembagian);
+            result = resPerkalian(pchn1, pchn2);
+            CetakHasil(result);
             break;
         default:
             printf("Invalid Input");
