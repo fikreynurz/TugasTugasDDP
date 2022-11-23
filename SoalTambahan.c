@@ -11,6 +11,7 @@ int main()
 
     while (!loop)
     {
+        system("cls");
         printf("Input Pecahan 1");
         InputPecahan(&pchn1);
         printf("Input Pecahan 2");
