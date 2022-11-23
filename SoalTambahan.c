@@ -7,9 +7,9 @@ int main()
 {
     Pecahan pchn1, pchn2, penjumlahan, pengurangan, perkalian, pembagian, result;
     int opsi;
-    char loop = "Y";
+    bool loop = false;
 
-    while (loop == "N")
+    while (!loop)
     {
         printf("Input Pecahan 1");
         InputPecahan(&pchn1);
@@ -42,8 +42,15 @@ int main()
             break;
         }
 
-        printf("\nUlangi Program? (Y/N)");
-        scanf("%s", &loop);
+        char loopie;
+
+        printf("\nUlangi Program? (Y/N) \t: ");
+        scanf("%s", &loopie);
+
+        if (loopie == 'N')
+        {
+            loop = true;
+        }
     }
 
     return 0;

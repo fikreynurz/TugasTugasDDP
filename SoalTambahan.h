@@ -60,5 +60,5 @@ Pecahan resPembagian(Pecahan pchn1, Pecahan pchn2)
 
 void CetakHasil(Pecahan hasil)
 {
-    printf("%d/%d", hasil.pembilang, hasil.penyebut);
+    printf("Hasil \t\t\t: %d/%d", hasil.pembilang, hasil.penyebut);
 }
