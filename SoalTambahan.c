@@ -27,7 +27,7 @@ int main()
             break;
         case 2:
             pengurangan = resPengurangan(pchn1, pchn2);
-            CetakHasil(penjumlahan);
+            CetakHasil(pengurangan);
             break;
         case 3:
             perkalian = resPerkalian(pchn1, pchn2);
